@@ -129,4 +129,15 @@ print(f"{len(duplicates)} duplicates:{', '.join(duplicates)}\n")
 print(f"Set: .intersection: {end_time - start_time} seconds\n\n")
 
 
-
+# _______ BST in a dict ______
+start_time = time.time()
+duplicates = []
+d = {}
+for name_1 in names_1:
+    d[name_1] = 1
+for name_2 in names_2:
+    if name_2 in d:
+        duplicates.append(name_2)
+end_time = time.time()
+print(f"{len(duplicates)} duplicates:{', '.join(duplicates)}\n")
+print(f"Binary Search Tree: {end_time - start_time} seconds\n\n")
